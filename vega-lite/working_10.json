@@ -1,5 +1,5 @@
 {
-	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
 	"description": "Dashboard showing support for a 25% flat gas export tax overall and broken down by chosen groups.",
 	"data": {
 		"url": "data/gas_tax/consolidated_gas_tax_support.csv"
@@ -70,7 +70,12 @@
 				},
 				"tooltip": [
 					{ "field": "Response", "type": "nominal", "title": "Response" },
-					{ "field": "Value", "type": "quantitative", "title": "Percentage", "format": ".0%" }
+					{
+						"field": "Value",
+						"type": "quantitative",
+						"title": "Percentage",
+						"format": ".0%"
+					}
 				]
 			}
 		},
@@ -136,7 +141,12 @@
 					"tooltip": [
 						{ "field": "Category", "type": "nominal", "title": "Group" },
 						{ "field": "Response", "type": "nominal", "title": "Response" },
-						{ "field": "Value", "type": "quantitative", "title": "Percentage", "format": ".0%" }
+						{
+							"field": "Value",
+							"type": "quantitative",
+							"title": "Percentage",
+							"format": ".0%"
+						}
 					]
 				}
 			}
@@ -144,11 +154,41 @@
 	],
 	"config": {
 		"background": "#ffffff",
-		"title": {"font": "Inter, 'Helvetica Neue', Arial, sans-serif", "fontSize": 16, "fontWeight": "600", "anchor": "start", "color": "#0f172a"},
+		"title": {
+			"font": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"fontSize": 16,
+			"fontWeight": "600",
+			"anchor": "start",
+			"color": "#0f172a"
+		},
 		"view": { "stroke": "transparent" },
-		"axis": {"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "labelFontSize": 12, "titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "titleFontSize": 13, "grid": false, "domainColor": "#e6eef8", "tickColor": "#cfe0f5"},
-		"legend": {"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "labelFontSize": 12, "titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "titleFontSize": 13},
-		"range": {"category": ["#08306b","#2166ac","#2b8cbe","#67a9cf","#b3cde3","#c7e9fb","#4fb3bf","#74add1"]},
-		"mark": {"color": "#2b6cb0"}
+		"axis": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13,
+			"grid": false,
+			"domainColor": "#e6eef8",
+			"tickColor": "#cfe0f5"
+		},
+		"legend": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13
+		},
+		"range": {
+			"category": [
+				"#08306b",
+				"#2166ac",
+				"#2b8cbe",
+				"#67a9cf",
+				"#b3cde3",
+				"#c7e9fb",
+				"#4fb3bf",
+				"#74add1"
+			]
+		},
+		"mark": { "color": "#2b6cb0" }
 	}
 }

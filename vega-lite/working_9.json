@@ -1,4 +1,5 @@
 {
+	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
 	"config": {
 		"background": "#ffffff",
 		"title": {

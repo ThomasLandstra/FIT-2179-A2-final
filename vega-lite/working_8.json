@@ -1,5 +1,5 @@
 {
-	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
 	"title": {
 		"text": "Australia's Energy Trade Balance by Country",
 		"subtitle": "Total Oil Imports (ML) vs. Total LNG Exports (Million Tonnes) by Year",
@@ -36,7 +36,10 @@
 				"y": {
 					"field": "Country",
 					"type": "nominal",
-					"sort": { "field": "LNG Exports (Million Tonnes)", "order": "descending" },
+					"sort": {
+						"field": "LNG Exports (Million Tonnes)",
+						"order": "descending"
+					},
 					"axis": null
 				},
 				"x": {
@@ -60,12 +63,21 @@
 		{
 			"width": 180,
 			"height": 500,
-			"mark": { "type": "text", "align": "center", "baseline": "middle", "x": 90, "fontSize": 11 },
+			"mark": {
+				"type": "text",
+				"align": "center",
+				"baseline": "middle",
+				"x": 90,
+				"fontSize": 11
+			},
 			"encoding": {
 				"y": {
 					"field": "Country",
 					"type": "nominal",
-					"sort": { "field": "LNG Exports (Million Tonnes)", "order": "descending" },
+					"sort": {
+						"field": "LNG Exports (Million Tonnes)",
+						"order": "descending"
+					},
 					"axis": null
 				},
 				"text": { "field": "Country", "type": "nominal" }
@@ -80,7 +92,10 @@
 				"y": {
 					"field": "Country",
 					"type": "nominal",
-					"sort": { "field": "LNG Exports (Million Tonnes)", "order": "descending" },
+					"sort": {
+						"field": "LNG Exports (Million Tonnes)",
+						"order": "descending"
+					},
 					"axis": null
 				},
 				"x": {
