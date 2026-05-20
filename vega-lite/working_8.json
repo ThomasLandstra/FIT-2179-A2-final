@@ -1,0 +1,104 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"title": {
+		"text": "Australia's Energy Trade Balance by Country",
+		"subtitle": "Total Oil Imports (ML) vs. Total LNG Exports (Million Tonnes) by Year",
+		"anchor": "center",
+		"fontSize": 16,
+		"subtitleFontSize": 12,
+		"offset": 20
+	},
+	"data": {
+		"url": "data/oil_lng_trade_by_year.csv"
+	},
+	"params": [
+		{
+			"name": "year_select",
+			"value": 2023,
+			"bind": {
+				"input": "range",
+				"min": 2016,
+				"max": 2023,
+				"step": 1,
+				"name": "Financial Year: "
+			}
+		}
+	],
+	"transform": [{ "filter": "datum.Year == year_select" }],
+	"spacing": 15,
+	"hconcat": [
+		{
+			"title": "Total Oil Imports",
+			"width": 250,
+			"height": 500,
+			"mark": { "type": "bar", "color": "#1f77b4", "tooltip": true },
+			"encoding": {
+				"y": {
+					"field": "Country",
+					"type": "nominal",
+					"sort": { "field": "LNG Exports (Million Tonnes)", "order": "descending" },
+					"axis": null
+				},
+				"x": {
+					"field": "Oil Imports (ML)",
+					"type": "quantitative",
+					"scale": { "reverse": true },
+					"title": "Oil Imports (ML)"
+				},
+				"tooltip": [
+					{ "field": "Country", "type": "nominal" },
+					{ "field": "Year", "type": "quantitative", "title": "Year" },
+					{
+						"field": "Oil Imports (ML)",
+						"type": "quantitative",
+						"title": "Oil Imports (ML)",
+						"format": ",.1f"
+					}
+				]
+			}
+		},
+		{
+			"width": 180,
+			"height": 500,
+			"mark": { "type": "text", "align": "center", "baseline": "middle", "x": 90, "fontSize": 11 },
+			"encoding": {
+				"y": {
+					"field": "Country",
+					"type": "nominal",
+					"sort": { "field": "LNG Exports (Million Tonnes)", "order": "descending" },
+					"axis": null
+				},
+				"text": { "field": "Country", "type": "nominal" }
+			}
+		},
+		{
+			"title": "Total LNG Exports",
+			"width": 250,
+			"height": 500,
+			"mark": { "type": "bar", "color": "#ff7f0e", "tooltip": true },
+			"encoding": {
+				"y": {
+					"field": "Country",
+					"type": "nominal",
+					"sort": { "field": "LNG Exports (Million Tonnes)", "order": "descending" },
+					"axis": null
+				},
+				"x": {
+					"field": "LNG Exports (Million Tonnes)",
+					"type": "quantitative",
+					"title": "LNG Exports (Million Tonnes)"
+				},
+				"tooltip": [
+					{ "field": "Country", "type": "nominal" },
+					{ "field": "Year", "type": "quantitative", "title": "Year" },
+					{
+						"field": "LNG Exports (Million Tonnes)",
+						"type": "quantitative",
+						"title": "LNG Exports (Mil Tonnes)",
+						"format": ",.2f"
+					}
+				]
+			}
+		}
+	]
+}

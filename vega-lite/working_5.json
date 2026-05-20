@@ -1,0 +1,231 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+	"data": {
+		"url": "data/2025_oil_usage_by_type.csv"
+	},
+	"transform": [
+		{
+			"stack": "Fuel_Use",
+			"groupby": [],
+			"as": ["stack_Fuel_Use1", "stack_Fuel_Use2"],
+			"offset": "normalize",
+			"sort": [
+				{
+					"field": "Fuel_Type",
+					"order": "ascending"
+				}
+			]
+		},
+		{
+			"window": [
+				{
+					"op": "min",
+					"field": "stack_Fuel_Use1",
+					"as": "x"
+				},
+				{
+					"op": "max",
+					"field": "stack_Fuel_Use2",
+					"as": "x2"
+				},
+				{
+					"op": "dense_rank",
+					"as": "rank_Fuel_Subtype"
+				},
+				{
+					"op": "distinct",
+					"field": "Fuel_Subtype",
+					"as": "n_distinct_Subtype"
+				}
+			],
+			"groupby": ["Fuel_Type"],
+			"frame": [null, null],
+			"sort": [
+				{
+					"field": "Fuel_Subtype",
+					"order": "ascending"
+				}
+			]
+		},
+		{
+			"window": [
+				{
+					"op": "dense_rank",
+					"as": "rank_Fuel_Type"
+				}
+			],
+			"frame": [null, null],
+			"sort": [
+				{
+					"field": "Fuel_Type",
+					"order": "ascending"
+				}
+			]
+		},
+		{
+			"stack": "Fuel_Use",
+			"groupby": ["Fuel_Type"],
+			"as": ["y", "y2"],
+			"offset": "normalize",
+			"sort": [
+				{
+					"field": "Fuel_Subtype",
+					"order": "ascending"
+				}
+			]
+		},
+		{
+			"calculate": "datum.x + (datum.rank_Fuel_Type - 1) * 0.02",
+			"as": "nx"
+		},
+		{
+			"calculate": "datum.x2 + (datum.rank_Fuel_Type - 1) * 0.02",
+			"as": "nx2"
+		},
+		{
+			"calculate": "(datum.nx+datum.nx2)/2",
+			"as": "xc"
+		},
+		{
+			"calculate": "(datum.y+datum.y2)/2",
+			"as": "yc"
+		}
+	],
+	"vconcat": [
+		{
+			"mark": {
+				"type": "text",
+				"baseline": "middle",
+				"align": "center"
+			},
+			"encoding": {
+				"x": {
+					"aggregate": "min",
+					"field": "xc",
+					"title": "Fuel_Type",
+					"axis": {
+						"orient": "top"
+					}
+				},
+				"color": {
+					"field": "Fuel_Type",
+					"legend": null
+				},
+				"text": { "field": "Fuel_Type" }
+			}
+		},
+		{
+			"layer": [
+				{
+					"width": 400,
+					"height": 400,
+					"mark": {
+						"type": "rect"
+					},
+					"encoding": {
+						"x": {
+							"field": "nx",
+							"type": "quantitative",
+							"axis": null
+						},
+						"x2": { "field": "nx2" },
+						"y": {
+							"field": "y",
+							"type": "quantitative"
+						},
+						"y2": { "field": "y2" },
+						"color": {
+							"field": "Fuel_Type",
+							"type": "nominal",
+							"legend": null
+						},
+						"opacity": {
+							"field": "Fuel_Subtype",
+							"type": "nominal",
+							"legend": null
+						},
+						"tooltip": [
+							{
+								"field": "Fuel_Type",
+								"type": "nominal"
+							},
+							{
+								"field": "Fuel_Subtype",
+								"type": "nominal"
+							}
+						]
+					}
+				},
+				{
+					"mark": {
+						"type": "text",
+						"baseline": "middle"
+					},
+					"encoding": {
+						"x": {
+							"field": "xc",
+							"type": "quantitative",
+							"axis": null
+						},
+						"y": {
+							"field": "yc",
+							"type": "quantitative",
+							"axis": {
+								"title": "Fuel_Subtype"
+							}
+						},
+						"text": {
+							"field": "Fuel_Subtype",
+							"type": "nominal"
+						}
+					}
+				}
+			]
+		}
+	],
+	"resolve": {
+		"scale": {
+			"x": "shared"
+		}
+	},
+	"config": {
+		"background": "#ffffff",
+		"title": {
+			"font": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"fontSize": 16,
+			"fontWeight": "600",
+			"anchor": "start",
+			"color": "#0f172a"
+		},
+		"view": { "stroke": "transparent" },
+		"concat": { "spacing": 0 },
+		"axis": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13,
+			"grid": false,
+			"domainColor": "#e6eef8",
+			"tickColor": "#cfe0f5"
+		},
+		"legend": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13
+		},
+		"range": {
+			"category": [
+				"#08306b",
+				"#2166ac",
+				"#2b8cbe",
+				"#67a9cf",
+				"#b3cde3",
+				"#c7e9fb",
+				"#4fb3bf",
+				"#74add1"
+			]
+		},
+		"mark": { "color": "#2b6cb0" }
+	}
+}

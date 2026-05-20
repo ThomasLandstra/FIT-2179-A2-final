@@ -1,0 +1,79 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+	"data": { "url": "data/daily-chokepoint-transit-calls-and-shipment-volume-estimates.csv" },
+	"transform": [
+		{
+			"calculate": "toDate(datum.date)",
+			"as": "parsed_date"
+		},
+		{
+			"fold": ["n_tanker", "n_cargo"],
+			"as": ["ship_type", "vessel_count"]
+		},
+		{
+			"filter": "datum.parsed_date >= datetime(2026,1,1) && datum.parsed_date <= datetime(2026, 6, 1)"
+		}
+	],
+	"width": 600,
+	"height": 500,
+	"mark": "area",
+	"encoding": {
+		"x": {
+			"type": "temporal",
+			"timeUnit": "yearweek",
+			"field": "parsed_date",
+			"axis": { "format": "%Y %b", "tickCount": 5 },
+			"title": "Date"
+		},
+		"y": {
+			"aggregate": "sum",
+			"field": "vessel_count",
+			"stack": "zero",
+			"title": "Number of Vessels Transiting (Weekly)"
+		},
+		"color": {
+			"field": "ship_type",
+			"type": "nominal",
+			"legend": { "title": "Vessel Type" }
+		}
+	},
+	"config": {
+		"background": "#ffffff",
+		"title": {
+			"font": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"fontSize": 16,
+			"fontWeight": "600",
+			"anchor": "start",
+			"color": "#0f172a"
+		},
+		"view": { "stroke": "transparent" },
+		"axis": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13,
+			"grid": false,
+			"domainColor": "#e6eef8",
+			"tickColor": "#cfe0f5"
+		},
+		"legend": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13
+		},
+		"range": {
+			"category": [
+				"#08306b",
+				"#2166ac",
+				"#2b8cbe",
+				"#67a9cf",
+				"#b3cde3",
+				"#c7e9fb",
+				"#4fb3bf",
+				"#74add1"
+			]
+		},
+		"mark": { "color": "#2b6cb0" }
+	}
+}

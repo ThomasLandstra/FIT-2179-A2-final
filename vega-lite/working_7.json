@@ -1,0 +1,110 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+	"data": {
+		"url": "data/fuel_sales_by_type_long.csv"
+	},
+	"vconcat": [
+		{
+			"width": 670,
+			"mark": {
+				"type": "area",
+				"opacity": 0.7,
+				"line": { "size": 1 },
+				"interpolate": "monotone"
+			},
+			"encoding": {
+				"x": {
+					"field": "Date",
+					"type": "temporal",
+					"title": "Month",
+					"axis": { "format": "%b", "grid": false }
+				},
+				"y": {
+					"field": "Usage (ML)",
+					"type": "quantitative",
+					"stack": "zero"
+				},
+				"color": {
+					"field": "Fuel Type",
+					"type": "nominal",
+					"legend": { "title": "Fuel Type" }
+				}
+			}
+		},
+		{
+			"width": 180,
+			"height": 100,
+			"mark": {
+				"type": "area",
+				"line": { "size": 1.5 },
+				"opacity": 0.7
+			},
+			"encoding": {
+				"facet": {
+					"field": "Fuel Type",
+					"type": "ordinal",
+					"columns": 3
+				},
+				"x": {
+					"field": "Date",
+					"type": "temporal",
+					"title": "Month",
+					"axis": { "format": "%b", "grid": false }
+				},
+				"y": {
+					"field": "Usage (ML)",
+					"type": "quantitative"
+				},
+				"color": {
+					"field": "Fuel Type",
+					"type": "nominal",
+					"legend": null
+				}
+			},
+			"resolve": {
+				"scale": {
+					"y": "independent"
+				}
+			}
+		}
+	],
+	"config": {
+		"background": "#ffffff",
+		"title": {
+			"font": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"fontSize": 16,
+			"fontWeight": "600",
+			"anchor": "start",
+			"color": "#0f172a"
+		},
+		"view": { "stroke": "transparent" },
+		"axis": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13,
+			"grid": false,
+			"domainColor": "#e6eef8",
+			"tickColor": "#cfe0f5"
+		},
+		"legend": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13
+		},
+		"range": {
+			"category": [
+				"#08306b",
+				"#2166ac",
+				"#2b8cbe",
+				"#67a9cf",
+				"#b3cde3",
+				"#c7e9fb",
+				"#4fb3bf",
+				"#74add1"
+			]
+		},
+		"mark": { "color": "#2b6cb0" }
+	}
+}

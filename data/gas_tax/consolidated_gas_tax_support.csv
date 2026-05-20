@@ -1,0 +1,106 @@
+Group,Category,Response,Value,Sort_Order
+age+sex,Male,Strongly agree,0.32,0
+age+sex,Female,Strongly agree,0.2,1
+age+sex,18-24,Strongly agree,0.26,2
+age+sex,25-34,Strongly agree,0.17,3
+age+sex,35-49,Strongly agree,0.28,4
+age+sex,50-64,Strongly agree,0.26,5
+age+sex,65+,Strongly agree,0.32,6
+age+sex,Male,Agree,0.38,0
+age+sex,Female,Agree,0.33,1
+age+sex,18-24,Agree,0.34,2
+age+sex,25-34,Agree,0.38,3
+age+sex,35-49,Agree,0.34,4
+age+sex,50-64,Agree,0.34,5
+age+sex,65+,Agree,0.36,6
+age+sex,Male,Disagree,0.04,0
+age+sex,Female,Disagree,0.03,1
+age+sex,18-24,Disagree,0.03,2
+age+sex,25-34,Disagree,0.04,3
+age+sex,35-49,Disagree,0.03,4
+age+sex,50-64,Disagree,0.04,5
+age+sex,65+,Disagree,0.04,6
+age+sex,Male,Strongly disagree,0.02,0
+age+sex,Female,Strongly disagree,0.01,1
+age+sex,18-24,Strongly disagree,0.02,2
+age+sex,25-34,Strongly disagree,0.01,3
+age+sex,35-49,Strongly disagree,0.02,4
+age+sex,50-64,Strongly disagree,0.01,5
+age+sex,65+,Strongly disagree,0.01,6
+age+sex,Male,Don't know / Not sure,0.24,0
+age+sex,Female,Don't know / Not sure,0.43,1
+age+sex,18-24,Don't know / Not sure,0.35,2
+age+sex,25-34,Don't know / Not sure,0.4,3
+age+sex,35-49,Don't know / Not sure,0.33,4
+age+sex,50-64,Don't know / Not sure,0.35,5
+age+sex,65+,Don't know / Not sure,0.27,6
+state,NSW,Strongly agree,0.25,0
+state,VIC,Strongly agree,0.28,1
+state,QLD,Strongly agree,0.21,2
+state,WA,Strongly agree,0.22,3
+state,SA,Strongly agree,0.4,4
+state,Other,Strongly agree,0.35,5
+state,NSW,Agree,0.37,0
+state,VIC,Agree,0.33,1
+state,QLD,Agree,0.39,2
+state,WA,Agree,0.34,3
+state,SA,Agree,0.28,4
+state,Other,Agree,0.34,5
+state,NSW,Disagree,0.02,0
+state,VIC,Disagree,0.03,1
+state,QLD,Disagree,0.04,2
+state,WA,Disagree,0.07,3
+state,SA,Disagree,0.06,4
+state,Other,Disagree,0.03,5
+state,NSW,Strongly disagree,0.02,0
+state,VIC,Strongly disagree,0.0,1
+state,QLD,Strongly disagree,0.02,2
+state,WA,Strongly disagree,0.02,3
+state,SA,Strongly disagree,0.0,4
+state,Other,Strongly disagree,0.0,5
+state,NSW,Don't know / Not sure,0.34,0
+state,VIC,Don't know / Not sure,0.36,1
+state,QLD,Don't know / Not sure,0.34,2
+state,WA,Don't know / Not sure,0.35,3
+state,SA,Don't know / Not sure,0.26,4
+state,Other,Don't know / Not sure,0.28,5
+politics,ALP,Strongly agree,0.24,0
+politics,COA,Strongly agree,0.25,1
+politics,GRE,Strongly agree,0.26,2
+politics,PHON,Strongly agree,0.35,3
+politics,IND,Strongly agree,0.35,4
+politics,Other,Strongly agree,0.26,5
+politics,UND,Strongly agree,0.04,6
+politics,ALP,Agree,0.37,0
+politics,COA,Agree,0.35,1
+politics,GRE,Agree,0.47,2
+politics,PHON,Agree,0.31,3
+politics,IND,Agree,0.31,4
+politics,Other,Agree,0.36,5
+politics,UND,Agree,0.24,6
+politics,ALP,Disagree,0.05,0
+politics,COA,Disagree,0.04,1
+politics,GRE,Disagree,0.01,2
+politics,PHON,Disagree,0.04,3
+politics,IND,Disagree,0.03,4
+politics,Other,Disagree,0.02,5
+politics,UND,Disagree,0.01,6
+politics,ALP,Strongly disagree,0.01,0
+politics,COA,Strongly disagree,0.02,1
+politics,GRE,Strongly disagree,0.03,2
+politics,PHON,Strongly disagree,0.02,3
+politics,IND,Strongly disagree,0.0,4
+politics,Other,Strongly disagree,0.0,5
+politics,UND,Strongly disagree,0.0,6
+politics,ALP,Don't know / Not sure,0.33,0
+politics,COA,Don't know / Not sure,0.34,1
+politics,GRE,Don't know / Not sure,0.23,2
+politics,PHON,Don't know / Not sure,0.28,3
+politics,IND,Don't know / Not sure,0.31,4
+politics,Other,Don't know / Not sure,0.36,5
+politics,UND,Don't know / Not sure,0.71,6
+overall,Overall,Strongly agree,0.26,0
+overall,Overall,Agree,0.35,0
+overall,Overall,Disagree,0.04,0
+overall,Overall,Strongly disagree,0.01,0
+overall,Overall,Don't know / Not sure,0.34,0

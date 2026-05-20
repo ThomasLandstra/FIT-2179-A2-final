@@ -1,0 +1,154 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"description": "Dashboard showing support for a 25% flat gas export tax overall and broken down by chosen groups.",
+	"data": {
+		"url": "data/gas_tax/consolidated_gas_tax_support.csv"
+	},
+	"params": [
+		{
+			"name": "SelectGroup",
+			"value": "age+sex",
+			"bind": {
+				"input": "select",
+				"options": ["age+sex", "state", "politics"],
+				"labels": ["Age & Gender", "State", "Political Intention"],
+				"name": "Select Breakdown Category: "
+			}
+		}
+	],
+	"vconcat": [
+		{
+			"title": {
+				"text": "Overall Support for 25% Gas Export Tax",
+				"subtitle": "Percentage of all respondents nationwide",
+				"anchor": "start",
+				"fontSize": 16,
+				"offset": 10
+			},
+			"transform": [{ "filter": "datum.Group == 'overall'" }],
+			"width": 200,
+			"height": 200,
+			"mark": {
+				"type": "arc",
+				"innerRadius": 55,
+				"outerRadius": 85,
+				"stroke": "#fff",
+				"strokeWidth": 1
+			},
+			"encoding": {
+				"theta": { "field": "Value", "type": "quantitative" },
+				"color": {
+					"field": "Response",
+					"type": "nominal",
+					"scale": {
+						"domain": [
+							"Strongly agree",
+							"Agree",
+							"Disagree",
+							"Strongly disagree",
+							"Don't know / Not sure"
+						],
+						"range": ["#2e7d32", "#81c784", "#e57373", "#c62828", "#b0bec5"]
+					},
+					"legend": {
+						"title": "Response Category",
+						"orient": "right",
+						"labelFontSize": 11,
+						"titleFontSize": 12
+					}
+				},
+				"order": {
+					"field": "Response",
+					"type": "nominal",
+					"sort": [
+						"Strongly agree",
+						"Agree",
+						"Disagree",
+						"Strongly disagree",
+						"Don't know / Not sure"
+					]
+				},
+				"tooltip": [
+					{ "field": "Response", "type": "nominal", "title": "Response" },
+					{ "field": "Value", "type": "quantitative", "title": "Percentage", "format": ".0%" }
+				]
+			}
+		},
+		{
+			"title": {
+				"text": "Breakdown View",
+				"subtitle": "Small multiples showing selected demographic segments",
+				"anchor": "start",
+				"fontSize": 14,
+				"offset": 15
+			},
+			"transform": [{ "filter": "datum.Group == SelectGroup" }],
+			"facet": {
+				"field": "Category",
+				"type": "nominal",
+				"sort": { "field": "Sort_Order", "order": "ascending" },
+				"header": {
+					"title": null,
+					"labelFontSize": 12,
+					"labelFontWeight": "bold",
+					"labelPadding": 8
+				}
+			},
+			"columns": 3,
+			"spec": {
+				"width": 110,
+				"height": 110,
+				"mark": {
+					"type": "arc",
+					"innerRadius": 32,
+					"outerRadius": 50,
+					"stroke": "#fff",
+					"strokeWidth": 1
+				},
+				"encoding": {
+					"theta": { "field": "Value", "type": "quantitative" },
+					"color": {
+						"field": "Response",
+						"type": "nominal",
+						"scale": {
+							"domain": [
+								"Strongly agree",
+								"Agree",
+								"Disagree",
+								"Strongly disagree",
+								"Don't know / Not sure"
+							],
+							"range": ["#2e7d32", "#81c784", "#e57373", "#c62828", "#b0bec5"]
+						},
+						"legend": null
+					},
+					"order": {
+						"field": "Response",
+						"type": "nominal",
+						"sort": [
+							"Strongly agree",
+							"Agree",
+							"Disagree",
+							"Strongly disagree",
+							"Don't know / Not sure"
+						]
+					},
+					"tooltip": [
+						{ "field": "Category", "type": "nominal", "title": "Group" },
+						{ "field": "Response", "type": "nominal", "title": "Response" },
+						{ "field": "Value", "type": "quantitative", "title": "Percentage", "format": ".0%" }
+					]
+				}
+			}
+		}
+	],
+	"config": {
+		"background": "#ffffff",
+		"title": {"font": "Inter, 'Helvetica Neue', Arial, sans-serif", "fontSize": 16, "fontWeight": "600", "anchor": "start", "color": "#0f172a"},
+		"view": { "stroke": "transparent" },
+		"axis": {"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "labelFontSize": 12, "titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "titleFontSize": 13, "grid": false, "domainColor": "#e6eef8", "tickColor": "#cfe0f5"},
+		"legend": {"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "labelFontSize": 12, "titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "titleFontSize": 13},
+		"range": {"category": ["#08306b","#2166ac","#2b8cbe","#67a9cf","#b3cde3","#c7e9fb","#4fb3bf","#74add1"]},
+		"mark": {"color": "#2b6cb0"}
+	}
+}

@@ -1,0 +1,72 @@
+{
+	"config": {
+		"background": "#ffffff",
+		"title": {
+			"font": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"fontSize": 16,
+			"fontWeight": "600",
+			"anchor": "start",
+			"color": "#0f172a"
+		},
+		"view": { "stroke": "transparent" },
+		"axis": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13,
+			"grid": false,
+			"domainColor": "#e6eef8",
+			"tickColor": "#cfe0f5"
+		},
+		"legend": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13
+		},
+		"range": {
+			"category": [
+				"#08306b",
+				"#2166ac",
+				"#2b8cbe",
+				"#67a9cf",
+				"#b3cde3",
+				"#c7e9fb",
+				"#4fb3bf",
+				"#74add1"
+			]
+		},
+		"mark": { "color": "#2b6cb0" }
+	},
+	"description": "A simple line graph.",
+	"data": {
+		"url": "data/google_search_frequency.csv"
+	},
+	"transform": [
+		{
+			"fold": ["Gas Export Tax", "Australian Gas Export Tax", "PRRT"]
+		}
+	],
+	"mark": {
+		"type": "line",
+		"point": false,
+		"interpolate": "monotone"
+	},
+	"encoding": {
+		"x": {
+			"field": "Time",
+			"type": "temporal",
+			"title": "Date"
+		},
+		"y": {
+			"field": "value",
+			"type": "quantitative",
+			"title": "Search Frequency"
+		},
+		"color": {
+			"field": "key",
+			"type": "nominal",
+			"title": "Search Term"
+		}
+	}
+}

@@ -1,0 +1,166 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+	"title": {
+		"text": "Australia Fuel Price Surge: Pre-Crisis vs. 2026 Peak",
+		"subtitle": "Impact of the Strait of Hormuz conflict on retail fuel prices (c/L) across capital cities",
+		"subtitleFont": "sans-serif",
+		"subtitleFontSize": 12,
+		"subtitleColor": "#718096",
+		"font": "sans-serif",
+		"fontSize": 16,
+		"fontWeight": "bold",
+		"anchor": "start",
+		"offset": 25
+	},
+	"width": 400,
+	"height": 550,
+	"padding": { "left": 140, "right": 140, "top": 40, "bottom": 20 },
+	"data": {
+		"url": "data/Fuel Price Change.csv",
+		"format": { "type": "csv" }
+	},
+	"transform": [
+		{ "fold": ["Feb Price", "Peak Price"], "as": ["Period", "Price"] },
+		{ "calculate": "datum.City + ' (' + format(datum.Price, '.1f') + '¢)'", "as": "LabelLeft" },
+		{ "calculate": "'(' + format(datum.Price, '.1f') + '¢) ' + datum.City", "as": "LabelRight" }
+	],
+	"encoding": {
+		"x": {
+			"field": "Period",
+			"type": "nominal",
+			"scale": { "domain": ["Feb Price", "Peak Price"], "padding": 0.05 },
+			"axis": {
+				"labelExpr": "datum.value == 'Feb Price' ? 'Feb 2026 (Pre-Crisis)' : '2026 Peak Price'",
+				"labelFontSize": 13,
+				"labelFontWeight": "bold",
+				"labelColor": "#2d3748",
+				"title": null,
+				"orient": "top",
+				"labelPadding": 15,
+				"ticks": false,
+				"domain": false
+			}
+		},
+		"y": {
+			"field": "Price",
+			"type": "quantitative",
+			"scale": { "zero": false, "padding": 30 },
+			"axis": null
+		},
+		"color": {
+			"field": "City",
+			"type": "nominal",
+			"scale": {
+				"domain": [
+					"Melbourne",
+					"Sydney",
+					"Brisbane",
+					"Perth",
+					"Adelaide",
+					"Canberra",
+					"Hobart",
+					"Darwin"
+				],
+				"range": [
+					"#08306b",
+					"#2166ac",
+					"#2b8cbe",
+					"#67a9cf",
+					"#b3cde3",
+					"#c7e9fb",
+					"#4fb3bf",
+					"#74add1"
+				]
+			},
+			"legend": null
+		},
+		"tooltip": [
+			{ "field": "City", "type": "nominal" },
+			{ "field": "Period", "type": "nominal", "title": "Stage" },
+			{ "field": "Price", "type": "quantitative", "title": "Fuel Price (c/L)" }
+		]
+	},
+	"layer": [
+		{
+			"mark": {
+				"type": "line",
+				"strokeWidth": 2.5
+			},
+			"encoding": {
+				"detail": { "field": "City" }
+			}
+		},
+		{
+			"mark": {
+				"type": "point",
+				"filled": true,
+				"size": 60
+			}
+		},
+		{
+			"transform": [{ "filter": "datum.Period == 'Feb Price'" }],
+			"mark": {
+				"type": "text",
+				"align": "right",
+				"dx": -12,
+				"font": "sans-serif",
+				"fontSize": 12
+			},
+			"encoding": {
+				"text": { "field": "LabelLeft", "type": "nominal" }
+			}
+		},
+		{
+			"transform": [{ "filter": "datum.Period == 'Peak Price'" }],
+			"mark": {
+				"type": "text",
+				"align": "left",
+				"dx": 12,
+				"font": "sans-serif",
+				"fontSize": 12
+			},
+			"encoding": {
+				"text": { "field": "LabelRight", "type": "nominal" }
+			}
+		}
+	],
+	"config": {
+		"background": "#ffffff",
+		"title": {
+			"font": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"fontSize": 16,
+			"fontWeight": "600",
+			"anchor": "start",
+			"color": "#0f172a"
+		},
+		"view": { "stroke": "transparent" },
+		"axis": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13,
+			"grid": false,
+			"domainColor": "#e6eef8",
+			"tickColor": "#cfe0f5"
+		},
+		"legend": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13
+		},
+		"range": {
+			"category": [
+				"#08306b",
+				"#2166ac",
+				"#2b8cbe",
+				"#67a9cf",
+				"#b3cde3",
+				"#c7e9fb",
+				"#4fb3bf",
+				"#74add1"
+			]
+		},
+		"mark": { "color": "#2b6cb0" }
+	}
+}

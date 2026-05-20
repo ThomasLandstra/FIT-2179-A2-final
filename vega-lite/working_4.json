@@ -1,0 +1,112 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+	"width": 600,
+	"height": 350,
+	"projection": {
+		"type": "conicEqualArea",
+		"rotate": [-135, 0, 0],
+		"center": [10, -27],
+		"parallels": [-18, -36],
+		"scale": 600
+	},
+	"transform": [
+		{
+			"lookup": "properties.postal",
+			"from": {
+				"data": {
+					"url": "data/fuel_usage_2025_per_capita.csv"
+				},
+				"key": "State",
+				"fields": ["Oil_Usage", "Population", "Oil_Usage_ML_Per_100k"]
+			}
+		}
+	],
+	"data": {
+		"url": "data/ne_10m_admin_1_states_provinces.json",
+		"format": {
+			"type": "topojson",
+			"feature": "ne_10m_admin_1_states_provinces"
+		}
+	},
+	"mark": {
+		"type": "geoshape",
+		"stroke": "white"
+	},
+	"encoding": {
+		"color": {
+			"condition": {
+				"test": "datum.Oil_Usage_ML_Per_100k != null",
+				"field": "Oil_Usage_ML_Per_100k",
+				"type": "quantitative",
+				"scale": {
+					"type": "threshold",
+					"domain": [1.8, 2.4, 3.0],
+					"scheme": "reds"
+				}
+			},
+			"value": "blue",
+			"title": "Oil Usage (ML per 100k)"
+		},
+		"tooltip": [
+			{ "field": "properties.name", "type": "nominal", "title": "State Name" },
+			{
+				"field": "Oil_Usage_ML_Per_100k",
+				"type": "quantitative",
+				"title": "Oil Usage (ML/100k)",
+				"format": ".2f"
+			},
+			{
+				"field": "Oil_Usage",
+				"type": "quantitative",
+				"title": "Total Oil Usage (ML)",
+				"format": ",.1f"
+			},
+			{
+				"field": "Population",
+				"type": "quantitative",
+				"title": "Population ('000s)",
+				"format": ",.1f"
+			}
+		]
+	},
+
+	"config": {
+		"background": "#ffffff",
+		"title": {
+			"font": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"fontSize": 16,
+			"fontWeight": "600",
+			"anchor": "start",
+			"color": "#0f172a"
+		},
+		"view": { "stroke": "transparent" },
+		"axis": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13,
+			"grid": false,
+			"domainColor": "#e6eef8",
+			"tickColor": "#cfe0f5"
+		},
+		"legend": {
+			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"labelFontSize": 12,
+			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
+			"titleFontSize": 13
+		},
+		"range": {
+			"category": [
+				"#08306b",
+				"#2166ac",
+				"#2b8cbe",
+				"#67a9cf",
+				"#b3cde3",
+				"#c7e9fb",
+				"#4fb3bf",
+				"#74add1"
+			]
+		},
+		"mark": { "color": "#2b6cb0" }
+	}
+}

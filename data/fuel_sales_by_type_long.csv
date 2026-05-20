@@ -1,0 +1,145 @@
+Date,Fuel Type,Usage (ML)
+2025-01-01,Regular (<95 RON),714.7
+2025-02-01,Regular (<95 RON),680.2
+2025-03-01,Regular (<95 RON),745.6
+2025-04-01,Regular (<95 RON),715.2
+2025-05-01,Regular (<95 RON),725.6
+2025-06-01,Regular (<95 RON),690.0
+2025-07-01,Regular (<95 RON),708.6
+2025-08-01,Regular (<95 RON),711.6
+2025-09-01,Regular (<95 RON),701.3
+2025-10-01,Regular (<95 RON),748.7
+2025-11-01,Regular (<95 RON),722.5
+2025-12-01,Regular (<95 RON),772.9
+2025-01-01,Premium (95-97 RON),162.0
+2025-02-01,Premium (95-97 RON),152.7
+2025-03-01,Premium (95-97 RON),170.8
+2025-04-01,Premium (95-97 RON),162.7
+2025-05-01,Premium (95-97 RON),165.3
+2025-06-01,Premium (95-97 RON),156.2
+2025-07-01,Premium (95-97 RON),160.9
+2025-08-01,Premium (95-97 RON),162.1
+2025-09-01,Premium (95-97 RON),160.5
+2025-10-01,Premium (95-97 RON),173.1
+2025-11-01,Premium (95-97 RON),171.2
+2025-12-01,Premium (95-97 RON),179.7
+2025-01-01,Premium (98+ RON),276.1
+2025-02-01,Premium (98+ RON),265.7
+2025-03-01,Premium (98+ RON),289.9
+2025-04-01,Premium (98+ RON),286.2
+2025-05-01,Premium (98+ RON),295.1
+2025-06-01,Premium (98+ RON),277.9
+2025-07-01,Premium (98+ RON),288.4
+2025-08-01,Premium (98+ RON),288.7
+2025-09-01,Premium (98+ RON),289.9
+2025-10-01,Premium (98+ RON),304.9
+2025-11-01,Premium (98+ RON),293.6
+2025-12-01,Premium (98+ RON),318.8
+2025-01-01,Ethanol-blended Fuel,144.7
+2025-02-01,Ethanol-blended Fuel,139.0
+2025-03-01,Ethanol-blended Fuel,149.2
+2025-04-01,Ethanol-blended Fuel,142.2
+2025-05-01,Ethanol-blended Fuel,145.0
+2025-06-01,Ethanol-blended Fuel,139.1
+2025-07-01,Ethanol-blended Fuel,142.7
+2025-08-01,Ethanol-blended Fuel,143.4
+2025-09-01,Ethanol-blended Fuel,140.7
+2025-10-01,Ethanol-blended Fuel,146.9
+2025-11-01,Ethanol-blended Fuel,143.2
+2025-12-01,Ethanol-blended Fuel,152.3
+2025-01-01,Diesel,2564.8
+2025-02-01,Diesel,2525.0
+2025-03-01,Diesel,2753.7
+2025-04-01,Diesel,2712.0
+2025-05-01,Diesel,2903.4
+2025-06-01,Diesel,2856.0
+2025-07-01,Diesel,2843.5
+2025-08-01,Diesel,2780.4
+2025-09-01,Diesel,2786.2
+2025-10-01,Diesel,3065.7
+2025-11-01,Diesel,2858.0
+2025-12-01,Diesel,2875.2
+2025-01-01,Aviation Turbine Fuel Domestic,340.1
+2025-02-01,Aviation Turbine Fuel Domestic,315.5
+2025-03-01,Aviation Turbine Fuel Domestic,332.0
+2025-04-01,Aviation Turbine Fuel Domestic,344.6
+2025-05-01,Aviation Turbine Fuel Domestic,344.4
+2025-06-01,Aviation Turbine Fuel Domestic,334.5
+2025-07-01,Aviation Turbine Fuel Domestic,385.2
+2025-08-01,Aviation Turbine Fuel Domestic,382.2
+2025-09-01,Aviation Turbine Fuel Domestic,348.4
+2025-10-01,Aviation Turbine Fuel Domestic,367.6
+2025-11-01,Aviation Turbine Fuel Domestic,368.0
+2025-12-01,Aviation Turbine Fuel Domestic,365.7
+2025-01-01,Aviation Turbine Fuel International,517.7
+2025-02-01,Aviation Turbine Fuel International,448.9
+2025-03-01,Aviation Turbine Fuel International,478.9
+2025-04-01,Aviation Turbine Fuel International,456.9
+2025-05-01,Aviation Turbine Fuel International,450.1
+2025-06-01,Aviation Turbine Fuel International,464.5
+2025-07-01,Aviation Turbine Fuel International,508.9
+2025-08-01,Aviation Turbine Fuel International,485.9
+2025-09-01,Aviation Turbine Fuel International,486.8
+2025-10-01,Aviation Turbine Fuel International,504.9
+2025-11-01,Aviation Turbine Fuel International,488.3
+2025-12-01,Aviation Turbine Fuel International,554.8
+2025-01-01,LPG Automotive use,20.4
+2025-02-01,LPG Automotive use,19.1
+2025-03-01,LPG Automotive use,22.2
+2025-04-01,LPG Automotive use,19.8
+2025-05-01,LPG Automotive use,20.6
+2025-06-01,LPG Automotive use,19.8
+2025-07-01,LPG Automotive use,20.1
+2025-08-01,LPG Automotive use,18.5
+2025-09-01,LPG Automotive use,21.9
+2025-10-01,LPG Automotive use,19.2
+2025-11-01,LPG Automotive use,19.3
+2025-12-01,LPG Automotive use,20.8
+2025-01-01,LPG Non-automotive use,85.9
+2025-02-01,LPG Non-automotive use,79.7
+2025-03-01,LPG Non-automotive use,88.0
+2025-04-01,LPG Non-automotive use,93.1
+2025-05-01,LPG Non-automotive use,115.8
+2025-06-01,LPG Non-automotive use,131.4
+2025-07-01,LPG Non-automotive use,142.9
+2025-08-01,LPG Non-automotive use,133.1
+2025-09-01,LPG Non-automotive use,121.9
+2025-10-01,LPG Non-automotive use,108.3
+2025-11-01,LPG Non-automotive use,88.0
+2025-12-01,LPG Non-automotive use,100.7
+2025-01-01,Aviation Gasoline,4.9
+2025-02-01,Aviation Gasoline,4.7
+2025-03-01,Aviation Gasoline,5.8
+2025-04-01,Aviation Gasoline,6.1
+2025-05-01,Aviation Gasoline,7.9
+2025-06-01,Aviation Gasoline,7.2
+2025-07-01,Aviation Gasoline,6.0
+2025-08-01,Aviation Gasoline,6.4
+2025-09-01,Aviation Gasoline,6.3
+2025-10-01,Aviation Gasoline,6.1
+2025-11-01,Aviation Gasoline,5.6
+2025-12-01,Aviation Gasoline,5.4
+2025-01-01,Fuel Oil,66.7
+2025-02-01,Fuel Oil,70.1
+2025-03-01,Fuel Oil,65.4
+2025-04-01,Fuel Oil,63.1
+2025-05-01,Fuel Oil,44.9
+2025-06-01,Fuel Oil,45.1
+2025-07-01,Fuel Oil,39.0
+2025-08-01,Fuel Oil,46.9
+2025-09-01,Fuel Oil,46.7
+2025-10-01,Fuel Oil,49.2
+2025-11-01,Fuel Oil,46.3
+2025-12-01,Fuel Oil,75.6
+2025-01-01,Lubricating Oils & Greases,25.9
+2025-02-01,Lubricating Oils & Greases,26.3
+2025-03-01,Lubricating Oils & Greases,26.6
+2025-04-01,Lubricating Oils & Greases,25.8
+2025-05-01,Lubricating Oils & Greases,27.6
+2025-06-01,Lubricating Oils & Greases,27.3
+2025-07-01,Lubricating Oils & Greases,28.8
+2025-08-01,Lubricating Oils & Greases,26.8
+2025-09-01,Lubricating Oils & Greases,28.3
+2025-10-01,Lubricating Oils & Greases,29.6
+2025-11-01,Lubricating Oils & Greases,26.4
+2025-12-01,Lubricating Oils & Greases,27.2

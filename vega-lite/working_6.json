@@ -1,0 +1,59 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+	"title": "Days of Fuel Left by Fuel Type",
+	"data": {
+		"url": "data/fuel_left.csv",
+		"format": { "type": "csv" }
+	},
+	"params": [
+		{
+			"name": "panic_factor",
+			"value": 1.0,
+			"bind": {
+				"input": "range",
+				"min": 0.75,
+				"max": 1.25,
+				"step": 0.05,
+				"name": "Panic Buying Factor"
+			}
+		}
+	],
+	"transform": [
+		{
+			"calculate": "datum['Days Left'] * panic_factor",
+			"as": "Adjusted Days Left"
+		}
+	],
+	"mark": { "type": "bar", "tooltip": true },
+	"encoding": {
+		"x": {
+			"field": "Fuel Type",
+			"type": "nominal",
+			"sort": "-x",
+			"axis": { "title": "Fuel Type" }
+		},
+		"y": {
+			"field": "Adjusted Days Left",
+			"type": "quantitative",
+			"scale": { "domain": [0, 55] },
+			"axis": { "title": "Adjusted Days Left" }
+		},
+		"color": {
+			"field": "Fuel Type",
+			"type": "nominal",
+			"legend": null
+		}
+	},
+	"width": 400,
+	"height": 200
+	,
+"config": {
+	"background": "#ffffff",
+	"title": {"font": "Inter, 'Helvetica Neue', Arial, sans-serif", "fontSize": 16, "fontWeight": "600", "anchor": "start", "color": "#0f172a"},
+	"view": {"stroke": "transparent"},
+	"axis": {"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "labelFontSize": 12, "titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "titleFontSize": 13, "grid": false, "domainColor": "#e6eef8", "tickColor": "#cfe0f5"},
+	"legend": {"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "labelFontSize": 12, "titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif", "titleFontSize": 13},
+	"range": {"category": ["#08306b","#2166ac","#2b8cbe","#67a9cf","#b3cde3","#c7e9fb","#4fb3bf","#74add1"]},
+	"mark": {"color": "#2b6cb0"}
+}
+}
