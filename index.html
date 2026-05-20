@@ -10,20 +10,101 @@
 		<script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vega-embed@7.1.0"></script>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="index.css"
+			rel="stylesheet"
+		/>
 		<title>Document</title>
 	</head>
-	<body>
-		<main class="p-6">
-			<h1 class="text-2xl mb-4">Vega-Lite Visualisations</h1>
-			<div class="flex flex-col">
-				<!-- containers for working_1.json .. working_10.json -->
-				<div id="vis-1"></div>
-				<div id="vis-2"></div>
-				<div id="vis-3"></div>
-				<div id="vis-4"></div>
+	<body class="w-screen bg-sky-200 w-screen flex flex-col items-center">
+		<main
+			class="bg-gray-200 w-screen flex flex-col items-center w-full max-w-7xl mt-6 p-4 rounded-2xl"
+		>
+			<h1 class="text-7xl text-blue-900">Vega-Lite Visualisations</h1>
+			<div class="w-full flex flex-col">
+				<h2 class="text-4xl my-4 text-center">The Global Trigger</h2>
+				<div class="flex gap-4">
+					<div
+						id="vis-1"
+						class="w-[50%]"
+					></div>
+					<div class="w-[50%] mt-2">
+						<p>
+							<b>The Strait of Hormuz</b> is the world's most critical maritime
+							oil chokepoint. Even though Australia feels geographically
+							isolated from Middle Eastern conflicts, our modern economy relies
+							entirely on the uninterrupted flow of global shipping through this
+							narrow passage.
+						</p>
+						<br />
+						<p>
+							This area chart tracks the weekly volume of cargo ships and oil
+							tankers moving through the strait. Notice the sharp, sudden
+							drop-off in vessel transits starting in early february 2026. As
+							regional geopolitical conflict escalated into an outright
+							blockade, tanker activity ground to a near-halt, instantly
+							constricting the global supply of crude oil and sending shockwaves
+							through international markets.
+						</p>
+					</div>
+				</div>
+				<div class="flex gap-4">
+					<div class="w-[50%] mt-2">
+						<p>
+							Because oil is a globally traded commodity, a supply disruption
+							anywhere on earth triggers an immediate financial reaction
+							everywhere else. This slope graph demonstrates how the shipping
+							bottleneck in the Middle East directly impacted everyday
+							Australians at the bowser.
+						</p>
+						<br />
+						<p>
+							By comparing retail fuel prices across Australia immediately
+							before the 2026 crisis to the weeks following the outbreak, a
+							universal, aggressive upward trajectory is evident. No capital
+							city was spared; from Sydney to Perth, prices spiked sharply to
+							historic highs, illustrating the immediate, friction-free
+							transmission of global supply shocks into local living costs.
+						</p>
+					</div>
+					<div
+						id="vis-2"
+						class="w-[50%]"
+					></div>
+				</div>
+			</div>
+			<div class="w-full flex flex-col">
+				<h2 class="text-2xl">The fragile pipeline:</h2>
+				<div
+					id="vis-3"
+					class="w-full"
+				></div>
+				<div
+					id="vis-4"
+					class="w-[50%]"
+				></div>
 				<div id="vis-5"></div>
+			</div>
+			<div class="w-full flex flex-col">
+				<h2 class="text-2xl">The Domestic Countdown</h2>
 				<div id="vis-6"></div>
 				<div id="vis-7"></div>
+			</div>
+			<div class="w-full flex flex-col">
+				<h2 class="text-2xl">The Path to Resilience</h2>
 				<div id="vis-8"></div>
 				<div id="vis-9"></div>
 				<div id="vis-10"></div>

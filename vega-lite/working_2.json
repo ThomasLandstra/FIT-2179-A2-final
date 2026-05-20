@@ -12,17 +12,36 @@
 		"anchor": "start",
 		"offset": 25
 	},
-	"width": 400,
+	"width": "container",
 	"height": 550,
-	"padding": { "left": 140, "right": 140, "top": 40, "bottom": 20 },
+	"padding": { "left": 70, "right": 70, "top": 40, "bottom": 20 },
 	"data": {
 		"url": "data/Fuel Price Change.csv",
 		"format": { "type": "csv" }
 	},
+	"params": [
+		{ "name": "Melbourne", "value": true, "bind": { "input": "checkbox" } },
+		{ "name": "Sydney", "value": true, "bind": { "input": "checkbox" } },
+		{ "name": "Brisbane", "value": false, "bind": { "input": "checkbox" } },
+		{ "name": "Perth", "value": false, "bind": { "input": "checkbox" } },
+		{ "name": "Adelaide", "value": false, "bind": { "input": "checkbox" } },
+		{ "name": "Canberra", "value": false, "bind": { "input": "checkbox" } },
+		{ "name": "Hobart", "value": true, "bind": { "input": "checkbox" } },
+		{ "name": "Darwin", "value": true, "bind": { "input": "checkbox" } }
+	],
 	"transform": [
+		{
+			"filter": "(datum.City == 'Melbourne' && Melbourne) || (datum.City == 'Sydney' && Sydney) || (datum.City == 'Brisbane' && Brisbane) || (datum.City == 'Perth' && Perth) || (datum.City == 'Adelaide' && Adelaide) || (datum.City == 'Canberra' && Canberra) || (datum.City == 'Hobart' && Hobart) || (datum.City == 'Darwin' && Darwin)"
+		},
 		{ "fold": ["Feb Price", "Peak Price"], "as": ["Period", "Price"] },
-		{ "calculate": "datum.City + ' (' + format(datum.Price, '.1f') + '¢)'", "as": "LabelLeft" },
-		{ "calculate": "'(' + format(datum.Price, '.1f') + '¢) ' + datum.City", "as": "LabelRight" }
+		{
+			"calculate": "datum.City + ' (' + format(datum.Price, '.1f') + '¢)'",
+			"as": "LabelLeft"
+		},
+		{
+			"calculate": "'(' + format(datum.Price, '.1f') + '¢) ' + datum.City",
+			"as": "LabelRight"
+		}
 	],
 	"encoding": {
 		"x": {
@@ -45,7 +64,7 @@
 			"field": "Price",
 			"type": "quantitative",
 			"scale": { "zero": false, "padding": 30 },
-			"axis": null
+			"axis": { "labelAngle": 0 }
 		},
 		"color": {
 			"field": "City",
@@ -60,16 +79,6 @@
 					"Canberra",
 					"Hobart",
 					"Darwin"
-				],
-				"range": [
-					"#08306b",
-					"#2166ac",
-					"#2b8cbe",
-					"#67a9cf",
-					"#b3cde3",
-					"#c7e9fb",
-					"#4fb3bf",
-					"#74add1"
 				]
 			},
 			"legend": null
@@ -148,18 +157,6 @@
 			"labelFontSize": 12,
 			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
 			"titleFontSize": 13
-		},
-		"range": {
-			"category": [
-				"#08306b",
-				"#2166ac",
-				"#2b8cbe",
-				"#67a9cf",
-				"#b3cde3",
-				"#c7e9fb",
-				"#4fb3bf",
-				"#74add1"
-			]
 		},
 		"mark": { "color": "#2b6cb0" }
 	}

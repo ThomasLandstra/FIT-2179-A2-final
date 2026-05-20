@@ -1,6 +1,9 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-	"data": { "url": "data/daily-chokepoint-transit-calls-and-shipment-volume-estimates.csv" },
+	"data": {
+		"url": "data/daily-chokepoint-transit-calls-and-shipment-volume-estimates.csv"
+	},
+	"width": "container",
 	"transform": [
 		{
 			"calculate": "toDate(datum.date)",
@@ -14,8 +17,6 @@
 			"filter": "datum.parsed_date >= datetime(2026,1,1) && datum.parsed_date <= datetime(2026, 6, 1)"
 		}
 	],
-	"width": 600,
-	"height": 500,
 	"mark": "area",
 	"encoding": {
 		"x": {
