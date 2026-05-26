@@ -5,7 +5,7 @@
 	},
 	"vconcat": [
 		{
-			"width": 670,
+			"width": "container",
 			"mark": {
 				"type": "area",
 				"opacity": 0.7,

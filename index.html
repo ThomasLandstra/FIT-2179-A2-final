@@ -27,89 +27,499 @@
 			href="index.css"
 			rel="stylesheet"
 		/>
-		<title>Document</title>
+		<title>FIT2179 Assignment: Australia's Fuel Crisis</title>
 	</head>
-	<body class="w-screen bg-sky-200 w-screen flex flex-col items-center">
-		<main
-			class="bg-gray-200 w-screen flex flex-col items-center w-full max-w-7xl mt-6 p-4 rounded-2xl"
-		>
-			<h1 class="text-7xl text-blue-900">Oil Crisis in Australia</h1>
-			<div class="w-full flex flex-col">
-				<h2 class="text-4xl my-4 text-center">The Global Trigger</h2>
-				<div class="flex gap-4">
+	<body
+		class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center p-4 md:p-8 selection:bg-amber-500 selection:text-slate-950"
+	>
+		<main class="w-full max-w-6xl flex flex-col gap-12 my-6">
+			<header class="border-b border-slate-700 pb-8 text-center md:text-left">
+				<p
+					class="text-xs font-semibold tracking-widest text-amber-500 uppercase mb-2"
+				>
+					FIT2179 Data Visualisation Assignment
+				</p>
+				<h1
+					class="text-5xl md:text-6xl font-bold text-white tracking-tight leading-none"
+				>
+					THE 2026 OIL SHOCK
+				</h1>
+				<p class="text-xl text-slate-400 mt-3 max-w-3xl font-light">
+					Mapping vulnerability, consumption dependencies, and the path to
+					domestic energy resilience in Australia.
+				</p>
+			</header>
+
+			<section class="flex flex-col gap-6">
+				<div class="flex items-center gap-4">
+					<span
+						class="flex items-center justify-center bg-amber-500 text-slate-950 font-bold rounded-full w-8 h-8 text-sm"
+						>1</span
+					>
+					<h2
+						class="text-2xl font-bold tracking-tight uppercase text-amber-500"
+					>
+						The Global Trigger
+					</h2>
+				</div>
+
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-slate-800/40 p-6 rounded-2xl border border-slate-800"
+				>
 					<div
 						id="vis-1"
-						class="w-[50%]"
+						class="w-full bg-slate-950/40 p-4 rounded-xl min-h-[350px] flex items-center justify-center border border-slate-800"
 					></div>
-					<div class="w-[50%] mt-2">
-						<p>
-							<b>The Strait of Hormuz</b> is the world's most critical maritime
-							oil chokepoint. Even though Australia feels geographically
-							isolated from Middle Eastern conflicts, our modern economy relies
-							entirely on the uninterrupted flow of global shipping through this
-							narrow passage.
+					<div class="flex flex-col justify-center">
+						<h3 class="text-lg font-semibold text-white mb-2">
+							Visualisation 1: The Pulse of the Strait
+						</h3>
+						<p class="text-sm text-slate-400 mb-4 leading-relaxed">
+							<strong class="text-slate-200">The Strait of Hormuz</strong> is
+							the world's most critical maritime oil chokepoint. Even though
+							Australia feels geographically isolated from Middle Eastern
+							conflicts, our modern economy relies entirely on the uninterrupted
+							flow of global shipping through this narrow passage.
 						</p>
-						<br />
-						<p>
-							This area chart tracks the weekly volume of cargo ships and oil
-							tankers moving through the strait. Notice the sharp, sudden
-							drop-off in vessel transits starting in early february 2026. As
-							regional geopolitical conflict escalated into an outright
-							blockade, tanker activity ground to a near-halt, instantly
-							constricting the global supply of crude oil and sending shockwaves
-							through international markets.
-						</p>
+						<div
+							class="bg-slate-800 p-3 rounded-lg border-l-4 border-amber-500"
+						>
+							<span
+								class="text-xs font-bold uppercase tracking-wider text-amber-500 block mb-1"
+								>What to Observe:</span
+							>
+							<p class="text-xs text-slate-300 leading-relaxed">
+								This area chart tracks weekly cargo ship and oil tanker volume.
+								Notice the sharp, sudden drop-off in vessel transits starting in
+								early 2026. As a regional blockade ground tanker activity to a
+								near-halt, global supplies constricted instantly.
+							</p>
+						</div>
 					</div>
 				</div>
-				<div class="flex gap-4">
-					<div class="w-[50%] mt-2">
-						<p>
+
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-slate-800/40 p-6 rounded-2xl border border-slate-800"
+				>
+					<div class="flex flex-col justify-center order-2 md:order-1">
+						<h3 class="text-lg font-semibold text-white mb-2">
+							Visualisation 2: The Shockwave Hits Home
+						</h3>
+						<p class="text-sm text-slate-400 mb-4 leading-relaxed">
 							Because oil is a globally traded commodity, a supply disruption
 							anywhere on earth triggers an immediate financial reaction
 							everywhere else. This slope graph demonstrates how the shipping
 							bottleneck in the Middle East directly impacted everyday
 							Australians at the bowser.
 						</p>
-						<br />
-						<p>
-							By comparing retail fuel prices across Australia immediately
-							before the 2026 crisis to the weeks following the outbreak, a
-							universal, aggressive upward trajectory is evident. No capital
-							city was spared; from Sydney to Perth, prices spiked sharply to
-							historic highs, illustrating the immediate, friction-free
-							transmission of global supply shocks into local living costs.
-						</p>
+						<div
+							class="bg-slate-800 p-3 rounded-lg border-l-4 border-amber-500"
+						>
+							<span
+								class="text-xs font-bold uppercase tracking-wider text-amber-500 block mb-1"
+								>What to Observe:</span
+							>
+							<p class="text-xs text-slate-300 leading-relaxed">
+								Comparing retail fuel prices across Australia immediately before
+								the 2026 crisis to the weeks following demonstrates a universal,
+								aggressive upward trajectory. From Sydney to Perth, prices
+								spiked sharply to historic highs.
+							</p>
+						</div>
 					</div>
 					<div
 						id="vis-2"
-						class="w-[50%]"
+						class="w-full bg-slate-950/40 p-4 rounded-xl min-h-[350px] flex items-center justify-center border border-slate-800 order-1 md:order-2"
 					></div>
 				</div>
-			</div>
-			<div class="w-full flex flex-col">
-				<h2 class="text-2xl">The fragile pipeline:</h2>
+			</section>
+
+			<hr class="border-slate-800" />
+
+			<section class="flex flex-col gap-6">
+				<div class="flex items-center gap-4">
+					<span
+						class="flex items-center justify-center bg-amber-500 text-slate-950 font-bold rounded-full w-8 h-8 text-sm"
+						>2</span
+					>
+					<h2
+						class="text-2xl font-bold tracking-tight uppercase text-amber-500"
+					>
+						Our Fragile Lifelines
+					</h2>
+				</div>
+
 				<div
-					id="vis-3"
-					class="w-full"
-				></div>
+					class="bg-slate-800/40 p-6 rounded-2xl border border-slate-800 flex flex-col gap-4"
+				>
+					<div>
+						<h3 class="text-lg font-semibold text-white mb-1">
+							Visualisation 3: Mapping the Supply Gap
+						</h3>
+						<p class="text-sm text-slate-400 max-w-3xl mb-4">
+							To understand why a Middle Eastern shipping crisis impacts
+							Australia so heavily—despite our maps showing few direct shipping
+							lines—we must analyze our intermediate trade relationships and
+							domestic consumption realities.
+						</p>
+					</div>
+					<div
+						class="w-full bg-slate-950/40 p-4 rounded-xl border border-slate-800 flex flex-col gap-4"
+					>
+						<div
+							id="vis-3"
+							class="w-full min-h-[450px] flex items-center justify-center"
+						></div>
+						<p class="text-xs text-slate-300 bg-slate-800/50 p-3 rounded-lg">
+							<strong class="text-white">The Supply Lines:</strong> Primary
+							refined petroleum pathways originate not in the Middle East, but
+							from Asian refining hubs (Singapore, Malaysia, South Korea). This
+							highlights a structural vulnerability: Australia does not directly
+							import the majority of its crude; instead, we rely on Asian
+							nations that buy raw crude through the Strait of Hormuz, refine
+							it, and sell it to us. If their raw supply drops, our refined
+							supply vanishes.
+						</p>
+					</div>
+				</div>
+
 				<div
-					id="vis-4"
-					class="w-[50%]"
-				></div>
-				<div id="vis-5"></div>
-			</div>
-			<div class="w-full flex flex-col">
-				<h2 class="text-2xl">The Domestic Countdown</h2>
-				<div id="vis-6"></div>
-				<div id="vis-7"></div>
-			</div>
-			<div class="w-full flex flex-col">
-				<h2 class="text-2xl">The Path to Resilience</h2>
-				<div id="vis-8"></div>
-				<div id="vis-9"></div>
-				<div id="vis-10"></div>
-			</div>
+					class="bg-slate-800/40 p-6 rounded-2xl border border-slate-800 flex flex-col gap-4"
+				>
+					<div>
+						<h3 class="text-lg font-semibold text-white mb-1">
+							Visualisation 4: State Dependencies
+						</h3>
+						<p class="text-sm text-slate-400 max-w-3xl mb-4">
+							Fuel distribution patterns are highly uneven across Australian
+							territory, driving vastly asymmetric structural exposure to
+							external macroeconomic shocks.
+						</p>
+					</div>
+					<div
+						class="w-full bg-slate-950/40 p-4 rounded-xl border border-slate-800 flex flex-col gap-4"
+					>
+						<div
+							id="vis-4"
+							class="w-full min-h-[450px] flex items-center justify-center"
+						></div>
+						<p class="text-xs text-slate-300 bg-slate-800/50 p-3 rounded-lg">
+							<strong class="text-white">State Consumption:</strong> WA and NT
+							exhibit the heaviest fuel dependency per 100,000 residents due to
+							mining, farming, and massive transit spans. Conversely, highly
+							urbanized states like New South Wales, Victoria, and South
+							Island-proximate Tasmania register significantly lower per-capita
+							usage, showing that Australia's economic vulnerability to oil
+							shocks is highly unequal across state borders.
+						</p>
+					</div>
+				</div>
+
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch bg-slate-800/40 p-6 rounded-2xl border border-slate-800"
+				>
+					<div
+						class="w-full bg-slate-950/40 p-4 rounded-xl flex items-center justify-center border border-slate-800"
+					>
+						<div
+							id="vis-5"
+							class="w-full h-full min-h-[400px] flex items-center justify-center"
+						></div>
+					</div>
+					<div class="flex flex-col justify-center">
+						<h3 class="text-lg font-semibold text-white mb-2">
+							Visualisation 5: The Fuel Blueprint (National Consumption Mix)
+						</h3>
+						<p class="text-sm text-slate-400 mb-4 leading-relaxed">
+							Not all fuels are created equal; saving our economy requires
+							knowing exactly where our energy pressure points are concentrated
+							via national petroleum product sales.
+						</p>
+						<div
+							class="bg-slate-800 p-4 rounded-lg border-l-4 border-amber-500 flex-1 flex flex-col justify-center"
+						>
+							<span
+								class="text-xs font-bold uppercase tracking-wider text-amber-500 block mb-1"
+								>What to Observe:</span
+							>
+							<p class="text-xs text-slate-300 leading-relaxed mb-3">
+								<strong class="text-white">Diesel</strong> stands out as the
+								absolute heavyweight of the Australian economy, commanding a
+								footprint over double the size of the next largest category.
+								This underscores our extreme reliance on heavy freight, farming
+								equipment, and interstate logistics.
+							</p>
+							<p class="text-xs text-slate-300 leading-relaxed">
+								Within passenger vehicles, regular &lt;95 octane forms the
+								largest baseline. Interestingly, combined aviation fuel accounts
+								for approximately
+								<span class="text-amber-500 font-semibold">65%</span> of the
+								volume of automotive fuel, spotlighting commercial aviation as a
+								massive demand sector.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<hr class="border-slate-800" />
+
+			<section class="flex flex-col gap-6">
+				<div class="flex items-center gap-4">
+					<span
+						class="flex items-center justify-center bg-amber-500 text-slate-950 font-bold rounded-full w-8 h-8 text-sm"
+						>3</span
+					>
+					<h2
+						class="text-2xl font-bold tracking-tight uppercase text-amber-500"
+					>
+						The Domestic Countdown
+					</h2>
+				</div>
+
+				<p class="text-sm text-slate-400 max-w-2xl -mt-2">
+					With imports restricted, Australia must survive on its domestic
+					sovereign reserves. These two visualizations simulate inventory
+					lifespans and reveal seasonal trends critical to policy planning.
+				</p>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div
+						class="bg-slate-800/40 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between"
+					>
+						<div>
+							<h3 class="text-base font-semibold text-white mb-2">
+								Visualisation 6: Scarcity Simulations & Stock Countdown
+							</h3>
+							<div
+								id="vis-6"
+								class="bg-slate-950/40 p-4 rounded-xl min-h-[300px] mb-4 flex items-center justify-center border border-slate-800"
+							></div>
+						</div>
+						<div
+							class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/50"
+						>
+							<p class="text-xs text-slate-300 leading-relaxed">
+								<strong class="text-white">Simulation Analysis:</strong> Under
+								normal buying factors, our safety net is razor-thin: we hold
+								just 35 days of Diesel, 29 days of Aviation Kerosene, and 42
+								days of Automotive Gasoline. Panic buying behavior rapidly
+								shrinks these reserves, while shifting to Aggressive Fuel
+								Rationing demonstrates the power of emergency conservation
+								measures.
+							</p>
+						</div>
+					</div>
+
+					<div
+						class="bg-slate-800/40 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between"
+					>
+						<div
+							class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/50 h-full flex flex-col justify-center"
+						>
+							<h3 class="text-base font-semibold text-white mb-2">
+								Policy Planning Dashboard
+							</h3>
+							<p class="text-xs text-slate-300 leading-relaxed">
+								Adjusting behavior matrices dynamically illustrates how consumer
+								panic cuts operational reserve margins, making rapid
+								administrative intervention critical to preserving supply
+								continuity.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="bg-slate-800/40 p-6 rounded-2xl border border-slate-800 flex flex-col gap-4"
+				>
+					<div>
+						<h3 class="text-base font-semibold text-white mb-1">
+							Visualisation 7: Seasonal Volatility & Demand Rhythms
+						</h3>
+						<p class="text-sm text-slate-400 max-w-3xl">
+							The monthly area and small-multiple charts reveal the predictable
+							peaks and troughs of fuel demand across a calendar year, serving
+							as crucial baseline data for demand-side planning.
+						</p>
+					</div>
+					<div
+						id="vis-7"
+						class="w-full bg-slate-950/40 p-4 rounded-xl min-h-[500px] flex items-center justify-center border border-slate-800"
+					></div>
+					<div
+						class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/50"
+					>
+						<p class="text-xs text-slate-300 leading-relaxed">
+							<strong class="text-white">Seasonal Observation:</strong> Total
+							fuel consumption bottoms out in February, while hitting its
+							maximum during the October harvesting and end-of-year December
+							holiday rushes. Diesel peaks aggressively in October to power
+							regional agricultural harvesting. Aviation fuels show clear
+							vacation spikes, whereas regular unleaded fuel remains remarkably
+							stable year-round compared to the sharp December surges found in
+							premium fuel blends.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<hr class="border-slate-800" />
+
+			<section class="flex flex-col gap-6">
+				<div class="flex items-center gap-4">
+					<span
+						class="flex items-center justify-center bg-amber-500 text-slate-950 font-bold rounded-full w-8 h-8 text-sm"
+						>4</span
+					>
+					<h2
+						class="text-2xl font-bold tracking-tight uppercase text-amber-500"
+					>
+						The Path to Resilience
+					</h2>
+				</div>
+
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-slate-800/40 p-6 rounded-2xl border border-slate-800"
+				>
+					<div class="flex flex-col justify-center">
+						<h3 class="text-lg font-semibold text-white mb-2">
+							Visualisation 8: The Energy Barter
+						</h3>
+						<p class="text-sm text-slate-400 mb-4 leading-relaxed">
+							While Australia is starved for liquid fuel, we are an absolute
+							superpower in gaseous energy, specifically Liquefied Natural Gas
+							(LNG). This interactive diverging bar chart tracks the volume of
+							our refined oil imports against our massive LNG exports to
+							individual trading partners.
+						</p>
+						<div
+							class="bg-slate-800 p-3 rounded-lg border-l-4 border-amber-500"
+						>
+							<p class="text-xs text-slate-300 leading-relaxed">
+								There is an undeniable strategic overlap: our top LNG
+								customers—including Japan, South Korea, China, Malaysia,
+								Singapore, and Taiwan—are the exact same nations that provide us
+								with our refined petroleum products. This indicates that
+								Australia holds a massive geopolitical bargaining chip.
+							</p>
+						</div>
+					</div>
+					<div
+						id="vis-8"
+						class="w-full bg-slate-950/40 p-4 rounded-xl min-h-[350px] flex items-center justify-center border border-slate-800"
+					></div>
+				</div>
+
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-800/40 p-6 rounded-2xl border border-slate-800 items-stretch"
+				>
+					<div
+						class="flex flex-col justify-between h-full bg-slate-900/40 p-4 rounded-xl border border-slate-800"
+					>
+						<div>
+							<h3 class="text-lg font-semibold text-white mb-2">
+								Visualisation 9: The Digital Horizon
+							</h3>
+							<p class="text-sm text-slate-400 leading-relaxed mb-4">
+								To fund a transition toward long-term fuel independence and
+								secure strategic reserves, policymakers have floated a
+								controversial mechanism: implementing a 25% Gas Export Tax. This
+								time-series line graph tracks Google search interest within
+								Australia.
+							</p>
+						</div>
+						<div
+							class="bg-slate-800 p-3 rounded-lg border-l-4 border-amber-500 mt-auto"
+						>
+							<p class="text-xs text-slate-300 leading-relaxed">
+								Prior to February 2026, terms like "Australian Gas Export Tax",
+								"Gas Export Tax", and "PRRT" registered near-zero public
+								interest. Following the supply squeeze, search frequencies
+								accelerated rapidly through March, eventually peaking in late
+								April and early May.
+							</p>
+						</div>
+					</div>
+					<div
+						class="w-full bg-slate-950/40 p-4 rounded-xl border border-slate-800 flex flex-col justify-center"
+					>
+						<div
+							id="vis-9"
+							class="w-full min-h-[300px] flex items-center justify-center"
+						></div>
+					</div>
+				</div>
+
+				<div
+					class="bg-slate-800/40 p-6 rounded-2xl border border-slate-800 flex flex-col gap-4"
+				>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+						<div>
+							<h3 class="text-lg font-semibold text-white mb-1">
+								Visualisation 10: The Unified Verdict
+							</h3>
+							<p class="text-sm text-slate-400">
+								This donut chart breaks down the definitive public polling
+								response to the proposed 25% export levy using the latest
+								consolidated demographic data.
+							</p>
+						</div>
+						<div
+							class="bg-slate-950/50 p-4 rounded-xl flex items-center justify-around border border-slate-800"
+						>
+							<div class="text-center">
+								<span
+									class="text-4xl font-extrabold text-amber-500 block tracking-tight"
+									>61%</span
+								>
+								<span
+									class="text-[10px] text-slate-400 uppercase tracking-wider block mt-1"
+									>Total National Support</span
+								>
+							</div>
+							<div class="h-8 w-px bg-slate-800"></div>
+							<div class="text-center">
+								<span
+									class="text-4xl font-extrabold text-slate-500 block tracking-tight"
+									>5%</span
+								>
+								<span
+									class="text-[10px] text-slate-400 uppercase tracking-wider block mt-1"
+									>Total Disagreement</span
+								>
+							</div>
+						</div>
+					</div>
+					<div
+						id="vis-10"
+						class="w-full bg-slate-950/40 p-4 rounded-xl min-h-[450px] flex items-center justify-center border border-slate-800"
+					></div>
+					<div
+						class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/50"
+					>
+						<p class="text-xs text-slate-300 leading-relaxed">
+							<strong class="text-white">Consensus Matrix:</strong> The data
+							reveals an overwhelming consensus: a resounding 61% of Australians
+							support the export tax (26% strongly agreeing and 35% agreeing).
+							What makes this insight remarkable is its universal
+							uniformity—high support is sustained across every age group,
+							state, and political affiliation. Disagreement is practically
+							non-existent, totaling just 5% (4% disagreeing, 1% strongly
+							disagreeing).
+						</p>
+					</div>
+				</div>
+			</section>
 		</main>
+
+		<footer
+			class="w-full max-w-6xl text-center text-xs text-slate-600 border-t border-slate-800 pt-4 pb-8"
+		>
+			Data and simulations generated for academic review under Monash University
+			FIT2179.
+		</footer>
+
 		<script src="add_vis.js"></script>
 	</body>
 </html>

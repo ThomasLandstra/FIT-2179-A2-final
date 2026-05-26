@@ -26,7 +26,11 @@
 				"offset": 10
 			},
 			"transform": [{ "filter": "datum.Group == 'overall'" }],
-			"width": 200,
+			"width": "container",
+			"autosize": {
+				"type": "fit",
+				"contains": "padding"
+			},
 			"height": 200,
 			"mark": {
 				"type": "arc",

@@ -3,6 +3,8 @@
 	"data": {
 		"url": "data/2025_oil_usage_by_type.csv"
 	},
+	"width": "container",
+	"height": "container",
 	"transform": [
 		{
 			"stack": "Fuel_Use",
@@ -117,8 +119,8 @@
 		{
 			"layer": [
 				{
-					"width": 400,
-					"height": 400,
+					"width": "container",
+					"height": "container",
 					"mark": {
 						"type": "rect"
 					},
