@@ -5,12 +5,12 @@
 	"params": [
 		{
 			"name": "zoom",
-			"value": 130,
+			"value": 180,
 			"bind": {
 				"input": "range",
 				"min": 130,
 				"max": 1500,
-				"step": 10,
+				"step": 50,
 				"name": "Zoom Level"
 			}
 		},
@@ -19,20 +19,20 @@
 			"value": 0,
 			"bind": {
 				"input": "range",
-				"min": -180,
-				"max": 180,
-				"step": 2,
+				"min": -90,
+				"max": 90,
+				"step": 5,
 				"name": "Pan Horizontally (Longitude)"
 			}
 		},
 		{
 			"name": "pan_lat",
-			"value": 0,
+			"value": -22,
 			"bind": {
 				"input": "range",
 				"min": -90,
 				"max": 90,
-				"step": 2,
+				"step": 5,
 				"name": "Pan Vertically (Latitude)"
 			}
 		}
@@ -118,7 +118,7 @@
 					"scale": {
 						"range": [1.5, 8]
 					},
-					"title": "Oil Import Volume"
+					"legend": null
 				},
 				"tooltip": [
 					{ "field": "Country", "type": "nominal" },

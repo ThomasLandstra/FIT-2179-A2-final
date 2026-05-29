@@ -105,9 +105,7 @@
 					"aggregate": "min",
 					"field": "xc",
 					"title": "Fuel_Type",
-					"axis": {
-						"orient": "top"
-					}
+					"axis": null
 				},
 				"color": {
 					"field": "Fuel_Type",
@@ -120,7 +118,7 @@
 			"layer": [
 				{
 					"width": "container",
-					"height": "container",
+					"height": 500,
 					"mark": {
 						"type": "rect"
 					},
@@ -133,7 +131,8 @@
 						"x2": { "field": "nx2" },
 						"y": {
 							"field": "y",
-							"type": "quantitative"
+							"type": "quantitative",
+							"axis": null
 						},
 						"y2": { "field": "y2" },
 						"color": {
@@ -149,11 +148,19 @@
 						"tooltip": [
 							{
 								"field": "Fuel_Type",
+								"title": "Fuel Type",
 								"type": "nominal"
 							},
 							{
 								"field": "Fuel_Subtype",
+								"title": "Fuel Subtype",
 								"type": "nominal"
+							},
+							{
+								"field": "Fuel_Use",
+								"title": "Fuel Use (ML)",
+								"type": "quantitative",
+								"format": ",.1f"
 							}
 						]
 					}
@@ -208,7 +215,7 @@
 			"titleFontSize": 13,
 			"grid": false,
 			"domainColor": "#e6eef8",
-			"tickColor": "#cfe0f5"
+			"ticks": false
 		},
 		"legend": {
 			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",

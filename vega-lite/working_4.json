@@ -5,9 +5,9 @@
 	"projection": {
 		"type": "conicEqualArea",
 		"rotate": [-135, 0, 0],
-		"center": [10, -27],
+		"center": [6, -27],
 		"parallels": [-18, -36],
-		"scale": 600
+		"scale": 850
 	},
 	"transform": [
 		{
@@ -38,14 +38,17 @@
 				"test": "datum.Oil_Usage_ML_Per_100k != null",
 				"field": "Oil_Usage_ML_Per_100k",
 				"type": "quantitative",
+				"title": "Oil Usage (ML per 100k)",
+				"legend": {
+					"title": "Oil Usage (ML per 100k)"
+				},
 				"scale": {
 					"type": "threshold",
 					"domain": [1.8, 2.4, 3.0],
 					"scheme": "reds"
 				}
 			},
-			"value": "blue",
-			"title": "Oil Usage (ML per 100k)"
+			"value": "#d9d9d9"
 		},
 		"tooltip": [
 			{ "field": "properties.name", "type": "nominal", "title": "State Name" },

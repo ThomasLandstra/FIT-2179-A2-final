@@ -29,8 +29,8 @@
 	"hconcat": [
 		{
 			"title": "Total Oil Imports",
-			"width": 250,
 			"height": 500,
+			"width": 420,
 			"mark": { "type": "bar", "color": "#1f77b4", "tooltip": true },
 			"encoding": {
 				"y": {
@@ -61,7 +61,6 @@
 			}
 		},
 		{
-			"width": 180,
 			"height": 500,
 			"mark": {
 				"type": "text",
@@ -85,8 +84,8 @@
 		},
 		{
 			"title": "Total LNG Exports",
-			"width": 250,
 			"height": 500,
+			"width": 420,
 			"mark": { "type": "bar", "color": "#ff7f0e", "tooltip": true },
 			"encoding": {
 				"y": {

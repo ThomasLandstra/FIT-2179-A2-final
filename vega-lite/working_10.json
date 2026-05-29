@@ -7,25 +7,25 @@
 	"params": [
 		{
 			"name": "SelectGroup",
-			"value": "age+sex",
-			"bind": {
-				"input": "select",
-				"options": ["age+sex", "state", "politics"],
-				"labels": ["Age & Gender", "State", "Political Intention"],
-				"name": "Select Breakdown Category: "
-			}
+			"value": "age+sex"
 		}
 	],
 	"vconcat": [
 		{
 			"title": {
 				"text": "Overall Support for 25% Gas Export Tax",
-				"subtitle": "Percentage of all respondents nationwide",
 				"anchor": "start",
-				"fontSize": 16,
+				"fontSize": 20,
 				"offset": 10
 			},
-			"transform": [{ "filter": "datum.Group == 'overall'" }],
+			"transform": [
+				{ "filter": "datum.Group == 'overall'" },
+				{
+					"calculate": "datum.Response == 'Strongly agree' ? 1 : datum.Response == 'Agree' ? 2 : datum.Response == 'Disagree' ? 3 : datum.Response == 'Strongly disagree' ? 4 : 5",
+					"as": "resp_order"
+				},
+				{ "sort": [{ "field": "resp_order", "order": "ascending" }] }
+			],
 			"width": "container",
 			"autosize": {
 				"type": "fit",
@@ -34,8 +34,8 @@
 			"height": 200,
 			"mark": {
 				"type": "arc",
-				"innerRadius": 55,
-				"outerRadius": 85,
+				"innerRadius": 70,
+				"outerRadius": 120,
 				"stroke": "#fff",
 				"strokeWidth": 1
 			},
@@ -56,21 +56,17 @@
 					},
 					"legend": {
 						"title": "Response Category",
-						"orient": "right",
-						"labelFontSize": 11,
-						"titleFontSize": 12
+						"orient": "none",
+						"legendX": 700,
+						"legendY": 25,
+						"labelFontSize": 16,
+						"titleFontSize": 18
 					}
 				},
 				"order": {
-					"field": "Response",
-					"type": "nominal",
-					"sort": [
-						"Strongly agree",
-						"Agree",
-						"Disagree",
-						"Strongly disagree",
-						"Don't know / Not sure"
-					]
+					"field": "resp_order",
+					"type": "quantitative",
+					"sort": "ascending"
 				},
 				"tooltip": [
 					{ "field": "Response", "type": "nominal", "title": "Response" },
@@ -84,13 +80,6 @@
 			}
 		},
 		{
-			"title": {
-				"text": "Breakdown View",
-				"subtitle": "Small multiples showing selected demographic segments",
-				"anchor": "start",
-				"fontSize": 14,
-				"offset": 15
-			},
 			"transform": [{ "filter": "datum.Group == SelectGroup" }],
 			"facet": {
 				"field": "Category",
@@ -98,19 +87,26 @@
 				"sort": { "field": "Sort_Order", "order": "ascending" },
 				"header": {
 					"title": null,
-					"labelFontSize": 12,
+					"labelFontSize": 16,
 					"labelFontWeight": "bold",
 					"labelPadding": 8
 				}
 			},
 			"columns": 3,
 			"spec": {
-				"width": 110,
-				"height": 110,
+				"transform": [
+					{
+						"calculate": "datum.Response == 'Strongly agree' ? 1 : datum.Response == 'Agree' ? 2 : datum.Response == 'Disagree' ? 3 : datum.Response == 'Strongly disagree' ? 4 : 5",
+						"as": "resp_order"
+					},
+					{ "sort": [{ "field": "resp_order", "order": "ascending" }] }
+				],
+				"width": 330,
+				"height": 280,
 				"mark": {
 					"type": "arc",
-					"innerRadius": 32,
-					"outerRadius": 50,
+					"innerRadius": 70,
+					"outerRadius": 120,
 					"stroke": "#fff",
 					"strokeWidth": 1
 				},
@@ -132,15 +128,9 @@
 						"legend": null
 					},
 					"order": {
-						"field": "Response",
-						"type": "nominal",
-						"sort": [
-							"Strongly agree",
-							"Agree",
-							"Disagree",
-							"Strongly disagree",
-							"Don't know / Not sure"
-						]
+						"field": "resp_order",
+						"type": "quantitative",
+						"sort": "ascending"
 					},
 					"tooltip": [
 						{ "field": "Category", "type": "nominal", "title": "Group" },
@@ -177,9 +167,9 @@
 		},
 		"legend": {
 			"labelFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
-			"labelFontSize": 12,
+			"labelFontSize": 16,
 			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
-			"titleFontSize": 13
+			"titleFontSize": 17
 		},
 		"range": {
 			"category": [

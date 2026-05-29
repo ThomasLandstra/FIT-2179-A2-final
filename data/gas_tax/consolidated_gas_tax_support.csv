@@ -64,41 +64,41 @@ state,QLD,Don't know / Not sure,0.34,2
 state,WA,Don't know / Not sure,0.35,3
 state,SA,Don't know / Not sure,0.26,4
 state,Other,Don't know / Not sure,0.28,5
-politics,ALP,Strongly agree,0.24,0
-politics,COA,Strongly agree,0.25,1
-politics,GRE,Strongly agree,0.26,2
-politics,PHON,Strongly agree,0.35,3
-politics,IND,Strongly agree,0.35,4
+politics,Australian Labor Party,Strongly agree,0.24,0
+politics,Liberal/National Party,Strongly agree,0.25,1
+politics,Greens,Strongly agree,0.26,2
+politics,One Nation,Strongly agree,0.35,3
+politics,Independent,Strongly agree,0.35,4
 politics,Other,Strongly agree,0.26,5
-politics,UND,Strongly agree,0.04,6
-politics,ALP,Agree,0.37,0
-politics,COA,Agree,0.35,1
-politics,GRE,Agree,0.47,2
-politics,PHON,Agree,0.31,3
-politics,IND,Agree,0.31,4
+politics,Undecided,Strongly agree,0.04,6
+politics,Australian Labor Party,Agree,0.37,0
+politics,Liberal/National Party,Agree,0.35,1
+politics,Greens,Agree,0.47,2
+politics,One Nation,Agree,0.31,3
+politics,Independent,Agree,0.31,4
 politics,Other,Agree,0.36,5
-politics,UND,Agree,0.24,6
-politics,ALP,Disagree,0.05,0
-politics,COA,Disagree,0.04,1
-politics,GRE,Disagree,0.01,2
-politics,PHON,Disagree,0.04,3
-politics,IND,Disagree,0.03,4
+politics,Undecided,Agree,0.24,6
+politics,Australian Labor Party,Disagree,0.05,0
+politics,Liberal/National Party,Disagree,0.04,1
+politics,Greens,Disagree,0.01,2
+politics,One Nation,Disagree,0.04,3
+politics,Independent,Disagree,0.03,4
 politics,Other,Disagree,0.02,5
-politics,UND,Disagree,0.01,6
-politics,ALP,Strongly disagree,0.01,0
-politics,COA,Strongly disagree,0.02,1
-politics,GRE,Strongly disagree,0.03,2
-politics,PHON,Strongly disagree,0.02,3
-politics,IND,Strongly disagree,0.0,4
+politics,Undecided,Disagree,0.01,6
+politics,Australian Labor Party,Strongly disagree,0.01,0
+politics,Liberal/National Party,Strongly disagree,0.02,1
+politics,Greens,Strongly disagree,0.03,2
+politics,One Nation,Strongly disagree,0.02,3
+politics,Independent,Strongly disagree,0.0,4
 politics,Other,Strongly disagree,0.0,5
-politics,UND,Strongly disagree,0.0,6
-politics,ALP,Don't know / Not sure,0.33,0
-politics,COA,Don't know / Not sure,0.34,1
-politics,GRE,Don't know / Not sure,0.23,2
-politics,PHON,Don't know / Not sure,0.28,3
-politics,IND,Don't know / Not sure,0.31,4
+politics,Undecided,Strongly disagree,0.0,6
+politics,Australian Labor Party,Don't know / Not sure,0.33,0
+politics,Liberal/National Party,Don't know / Not sure,0.34,1
+politics,Greens,Don't know / Not sure,0.23,2
+politics,One Nation,Don't know / Not sure,0.28,3
+politics,Independent,Don't know / Not sure,0.31,4
 politics,Other,Don't know / Not sure,0.36,5
-politics,UND,Don't know / Not sure,0.71,6
+politics,Undecided,Don't know / Not sure,0.71,6
 overall,Overall,Strongly agree,0.26,0
 overall,Overall,Agree,0.35,0
 overall,Overall,Disagree,0.04,0

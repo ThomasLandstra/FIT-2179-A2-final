@@ -14,30 +14,58 @@
 			"as": ["ship_type", "vessel_count"]
 		},
 		{
+			"calculate": "datum.ship_type === 'n_cargo' ? 'Cargo Ships' : 'Oil Tanker ships '",
+			"as": "ship_label"
+		},
+		{
 			"filter": "datum.parsed_date >= datetime(2026,1,1) && datum.parsed_date <= datetime(2026, 6, 1)"
 		}
 	],
-	"mark": "area",
-	"encoding": {
-		"x": {
-			"type": "temporal",
-			"timeUnit": "yearweek",
-			"field": "parsed_date",
-			"axis": { "format": "%Y %b", "tickCount": 5 },
-			"title": "Date"
+	"layer": [
+		{
+			"mark": "area",
+			"encoding": {
+				"x": {
+					"type": "temporal",
+					"timeUnit": "yearweek",
+					"field": "parsed_date",
+					"axis": { "format": "%Y %b", "tickCount": 5 },
+					"title": "Date"
+				},
+				"y": {
+					"aggregate": "sum",
+					"field": "vessel_count",
+					"stack": "zero",
+					"title": "Number of Vessels Transiting (Weekly)"
+				},
+				"color": {
+					"field": "ship_label",
+					"type": "nominal",
+					"legend": {
+						"title": "Vessel Type",
+						"orient": "none",
+						"legendX": 265,
+						"legendY": 25
+					}
+				}
+			}
 		},
-		"y": {
-			"aggregate": "sum",
-			"field": "vessel_count",
-			"stack": "zero",
-			"title": "Number of Vessels Transiting (Weekly)"
-		},
-		"color": {
-			"field": "ship_type",
-			"type": "nominal",
-			"legend": { "title": "Vessel Type" }
+		{
+			"mark": {
+				"type": "text",
+				"align": "left",
+				"font": "Inter, 'Helvetica Neue', Arial, sans-serif",
+				"fontSize": 13
+			},
+			"encoding": {
+				"x": { "value": 90 },
+				"y": { "value": 15 },
+				"text": {
+					"value": "Straight closed (Feb 28th)"
+				}
+			}
 		}
-	},
+	],
 	"config": {
 		"background": "#ffffff",
 		"title": {
@@ -53,7 +81,6 @@
 			"labelFontSize": 12,
 			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
 			"titleFontSize": 13,
-			"grid": false,
 			"domainColor": "#e6eef8",
 			"tickColor": "#cfe0f5"
 		},

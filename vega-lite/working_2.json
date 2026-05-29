@@ -14,20 +14,52 @@
 	},
 	"width": "container",
 	"height": 550,
-	"padding": { "left": 70, "right": 70, "top": 40, "bottom": 20 },
+	"padding": { "left": 40, "right": 40, "top": 10, "bottom": 20 },
 	"data": {
 		"url": "data/Fuel Price Change.csv",
 		"format": { "type": "csv" }
 	},
 	"params": [
-		{ "name": "Melbourne", "value": true, "bind": { "input": "checkbox" } },
-		{ "name": "Sydney", "value": true, "bind": { "input": "checkbox" } },
-		{ "name": "Brisbane", "value": false, "bind": { "input": "checkbox" } },
-		{ "name": "Perth", "value": false, "bind": { "input": "checkbox" } },
-		{ "name": "Adelaide", "value": false, "bind": { "input": "checkbox" } },
-		{ "name": "Canberra", "value": false, "bind": { "input": "checkbox" } },
-		{ "name": "Hobart", "value": true, "bind": { "input": "checkbox" } },
-		{ "name": "Darwin", "value": true, "bind": { "input": "checkbox" } }
+		{
+			"name": "Melbourne",
+			"value": true,
+			"bind": { "input": "checkbox", "element": "#vis2-melb-check" }
+		},
+		{
+			"name": "Sydney",
+			"value": true,
+			"bind": { "input": "checkbox", "element": "#vis2-syd-check" }
+		},
+		{
+			"name": "Brisbane",
+			"value": false,
+			"bind": { "input": "checkbox", "element": "#vis2-bris-check" }
+		},
+		{
+			"name": "Perth",
+			"value": false,
+			"bind": { "input": "checkbox", "element": "#vis2-perth-check" }
+		},
+		{
+			"name": "Adelaide",
+			"value": false,
+			"bind": { "input": "checkbox", "element": "#vis2-adel-check" }
+		},
+		{
+			"name": "Canberra",
+			"value": false,
+			"bind": { "input": "checkbox", "element": "#vis2-cbr-check" }
+		},
+		{
+			"name": "Hobart",
+			"value": true,
+			"bind": { "input": "checkbox", "element": "#vis2-hobart-check" }
+		},
+		{
+			"name": "Darwin",
+			"value": true,
+			"bind": { "input": "checkbox", "element": "#vis2-darwin-check" }
+		}
 	],
 	"transform": [
 		{
@@ -47,7 +79,7 @@
 		"x": {
 			"field": "Period",
 			"type": "nominal",
-			"scale": { "domain": ["Feb Price", "Peak Price"], "padding": 0.05 },
+			"scale": { "domain": ["Feb Price", "Peak Price"], "padding": 0 },
 			"axis": {
 				"labelExpr": "datum.value == 'Feb Price' ? 'Feb 2026 (Pre-Crisis)' : '2026 Peak Price'",
 				"labelFontSize": 13,
@@ -63,8 +95,7 @@
 		"y": {
 			"field": "Price",
 			"type": "quantitative",
-			"scale": { "zero": false, "padding": 30 },
-			"axis": { "labelAngle": 0 }
+			"scale": { "zero": false, "padding": 0 }
 		},
 		"color": {
 			"field": "City",

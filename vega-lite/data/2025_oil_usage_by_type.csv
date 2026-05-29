@@ -1,14 +1,10 @@
-"Fuel_Type","Fuel_Subtype","Fuel_Use"
-"Automotive Petrol","<95 Octane",8636.9
-"Automotive Petrol","95-97 Octane",1977.2
-"Automotive Petrol","98+ Octane",3475.2
-"Automotive Petrol","Ethanol Blended",1728.4
-"Diesel","Diesel",33523.9
-"Aviation Fuel","Domestic",4228.2
-"Aviation Fuel","International",5846.6
-"Aviation Fuel","General Aviation",72.4
-"Liquified Natural Gas","Automotive Use",241.7
-"Liquified Natural Gas","Non-Automotive Use",1288.8
-"Oil","Fuel Oil",659
-"Oil","Lubricating Oil",326.6
-"Other Oil","Other Oil Products",588.6
+Fuel_Type,Fuel_Subtype,Fuel_Use
+Automotive Petrol,<95 Octane,8636.9
+Automotive Petrol,95-97 Octane,1977.2
+Automotive Petrol,98+ Octane,3475.2
+Automotive Petrol,Ethanol Blended,1728.4
+Diesel,Diesel,33523.9
+Aviation Fuel,Domestic,4228.2
+Aviation Fuel,International,5846.6
+Other,Misc.,1646.6
+Other,LNG,1530.5
