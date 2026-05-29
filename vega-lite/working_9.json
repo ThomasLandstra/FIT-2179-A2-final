@@ -15,7 +15,7 @@
 		"interpolate": "monotone"
 	},
 	"padding": { "left": 20, "right": 20, "top": 20, "bottom": 20 },
-	"width": 410,
+	"width": 400,
 	"height": 460,
 	"encoding": {
 		"x": {
