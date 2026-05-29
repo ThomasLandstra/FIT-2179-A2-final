@@ -9,35 +9,54 @@
 			"fold": ["Gas Export Tax", "Australian Gas Export Tax", "PRRT"]
 		}
 	],
-	"mark": {
-		"type": "line",
-		"point": false,
-		"interpolate": "monotone"
-	},
 	"padding": { "left": 20, "right": 20, "top": 20, "bottom": 20 },
 	"width": 400,
 	"height": 460,
-	"encoding": {
-		"x": {
-			"field": "Time",
-			"type": "temporal",
-			"title": "Date"
+	"layer": [
+		{
+			"mark": {
+				"type": "line",
+				"point": false,
+				"interpolate": "monotone"
+			},
+			"encoding": {
+				"x": {
+					"field": "Time",
+					"type": "temporal",
+					"title": "Date"
+				},
+				"y": {
+					"field": "value",
+					"type": "quantitative",
+					"title": "Search Frequency"
+				},
+				"color": {
+					"field": "key",
+					"type": "nominal",
+					"title": "Search Term",
+					"legend": {
+						"title": "Search Term",
+						"orient": "bottom"
+					}
+				}
+			}
 		},
-		"y": {
-			"field": "value",
-			"type": "quantitative",
-			"title": "Search Frequency"
-		},
-		"color": {
-			"field": "key",
-			"type": "nominal",
-			"title": "Search Term",
-			"legend": {
-				"title": "Search Term",
-				"orient": "bottom"
+		{
+			"mark": {
+				"type": "text",
+				"align": "left",
+				"font": "Inter, 'Helvetica Neue', Arial, sans-serif",
+				"fontSize": 13
+			},
+			"encoding": {
+				"x": { "value": 15 },
+				"y": { "value": 215 },
+				"text": {
+					"value": "End of February 2026, search interest jumps"
+				}
 			}
 		}
-	},
+	],
 	"config": {
 		"background": "#ffffff",
 		"title": {
