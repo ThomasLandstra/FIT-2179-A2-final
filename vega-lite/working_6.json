@@ -45,7 +45,7 @@
 		}
 	},
 	"width": 400,
-	"height": 200,
+	"height": 300,
 	"config": {
 		"background": "#ffffff",
 		"title": {
@@ -61,7 +61,7 @@
 			"labelFontSize": 12,
 			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
 			"titleFontSize": 13,
-			"grid": false,
+			"grid": true,
 			"domainColor": "#e6eef8",
 			"tickColor": "#cfe0f5"
 		},

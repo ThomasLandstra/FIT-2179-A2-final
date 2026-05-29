@@ -72,7 +72,6 @@
 			"labelFontSize": 12,
 			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
 			"titleFontSize": 13,
-			"grid": false,
 			"domainColor": "#e6eef8",
 			"tickColor": "#cfe0f5"
 		},
@@ -81,19 +80,6 @@
 			"labelFontSize": 12,
 			"titleFont": "Inter, 'Helvetica Neue', Arial, sans-serif",
 			"titleFontSize": 13
-		},
-		"range": {
-			"category": [
-				"#08306b",
-				"#2166ac",
-				"#2b8cbe",
-				"#67a9cf",
-				"#b3cde3",
-				"#c7e9fb",
-				"#4fb3bf",
-				"#74add1"
-			]
-		},
-		"mark": { "color": "#2b6cb0" }
+		}
 	}
 }

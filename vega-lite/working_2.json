@@ -89,13 +89,15 @@
 				"orient": "top",
 				"labelPadding": 15,
 				"ticks": false,
-				"domain": false
+				"domain": false,
+				"grid": true
 			}
 		},
 		"y": {
 			"field": "Price",
 			"type": "quantitative",
-			"scale": { "zero": false, "padding": 0 }
+			"scale": { "zero": false, "padding": 0 },
+			"axis": { "grid": true }
 		},
 		"color": {
 			"field": "City",
